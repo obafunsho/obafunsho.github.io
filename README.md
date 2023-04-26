@@ -4,7 +4,7 @@ Welcome to my portfolio.
 
 ## How to use this repo
 
-1. In your command line.
+1. In your command line, paste:
 ```bash
 git clone https://github.com/obafunsho/obafunsho.github.io.git
 ```
