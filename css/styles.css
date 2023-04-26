@@ -248,18 +248,41 @@ p {
   background-color: #e2e2e7;
 }
 
-/********** 
-    ---> Footer <---
-**********/
+/*****************
+    Footer
+******************/
 .footer {
   border-top: 1px solid #e2e2e7;
   height: 80px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
-.footer small {
-  color: #555;
+.footer__nav {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+.footer__logo {
+  max-width: 180px;
+}
+.footer__links {
+  list-style: none;
+  display: flex;
+  column-gap: 10px;
+}
+.footer__links li {
+  font-size: 0.875rem;
+}
+.footer__copyright {
+  color: #666;
+}
+@media (max-width: 450px) {
+  .footer__copyright {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .form {
@@ -594,7 +617,8 @@ p {
   background-color: #f5f5f7;
   border-radius: 1.5em;
   font-weight: 500;
-  margin-right: 1em;
+  letter-spacing: -0.5px;
+  margin-right: 0.5em;
   padding: 0.5em 1em;
 }
 .blog__post-item__image {
