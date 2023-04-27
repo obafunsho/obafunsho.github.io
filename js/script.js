@@ -1,3 +1,9 @@
+/********************
+    Name: Obafunsho Adelusi
+    Date: 2023-04-26
+    Description: Project 4    
+*********************/
+
 const menuIcon = document.getElementById("menu-icon"),
     sidebar = document.getElementById("sidebar");
 
