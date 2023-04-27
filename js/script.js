@@ -4,14 +4,16 @@
     Description: Project 4    
 *********************/
 
-const menuIcon = document.getElementById("menu-icon"),
-    sidebar = document.getElementById("sidebar");
-
-menuIcon.addEventListener("click", () => {
-    sidebar.classList.toggle("show");
-});
-
 function load() {
+    // Show/hide sidebar
+    const menuIcon = document.getElementById("menu-icon"),
+        sidebar = document.getElementById("sidebar");
+
+    menuIcon.addEventListener("click", () => {
+        sidebar.classList.toggle("show");
+    });
+
+    // Validate form
     document.getElementById("reset").addEventListener("click", clearFields);
 
     document.getElementById("contact-form").addEventListener("submit", (e) => {
