@@ -1,14 +1,14 @@
-/********** 
-    ---> Variables <---
-**********/
+/*****************
+    Variables
+******************/
 :root {
   --hue: 225;
   --sec-hue: 37;
 }
 
-/********** 
-    ---> Reset <---
-**********/
+/*****************
+    Reset
+******************/
 *,
 *::before,
 *::after {
@@ -20,9 +20,9 @@ html {
   scroll-behavior: smooth;
 }
 
-/********** 
-    ---> Default elements <---
-**********/
+/*****************
+    Element Defaults Styles
+******************/
 a {
   text-decoration: none;
   color: #0066dd;
@@ -128,9 +128,9 @@ p {
   margin-bottom: 1em;
 }
 
-/********** 
-    ---> Default classes <---
-**********/
+/*****************
+    Default Classes
+******************/
 .container {
   display: flex;
   width: 100%;
@@ -303,7 +303,7 @@ p {
 }
 
 /*****************
-    Footer
+    Footer Section
 ******************/
 .footer {
   border-top: 1px solid #e2e2e7;
@@ -340,6 +340,9 @@ p {
   }
 }
 
+/*****************
+    Form Layout
+******************/
 .form {
   max-width: 400px;
   margin: 0 auto;
