@@ -14,7 +14,6 @@ function load() {
 
         if (!formHasErrors()) {
             showModal();
-            clearFields();
         }
     });
 
@@ -33,6 +32,8 @@ function showModal() {
     const closeModalBtn = document.getElementById("close-modal");
     closeModalBtn.addEventListener("click", () => {
         modal.classList.remove("show");
+
+        window.location.replace("https://obafunsho.github.io");
     });
 }
 
