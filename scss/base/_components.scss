@@ -1,0 +1,112 @@
+@use 'variables' as *;
+
+/*****************
+    Buttons
+******************/
+.btn {
+    appearance: none;
+    display: inline-flex;
+    align-items: center;
+    gap: .25em;
+    border: 1.5px solid transparent;
+    border-radius: $border-radius--small;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.5em 0.625em;
+    transition: background-color 120ms ease-out, color 120ms ease-out;
+
+    @media (min-width: 600px) {
+        padding: 0.75em 0.875em;
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    &--black {
+        @extend .btn;
+        background-color: $black;
+        color: $white;
+
+        &:hover {
+            background-color: $grey-500
+        }
+    }
+
+    &-outline--black {
+        @extend .btn;
+        background-color: $white;
+        color: $black;
+        border-color: $black;
+
+        &:hover {
+            background-color: $black;
+            color: $white;
+        }
+    }
+
+    &--primary {
+        @extend .btn;
+        background-color: $primary-clr;
+        color: $white;
+
+        &:hover {
+            background-color: $white;
+            color: $primary-clr;
+        }
+    }
+
+    &-outline--primary {
+        @extend .btn;
+        background-color: $white;
+        color: $primary-clr;
+        border-color: $primary-clr;
+
+        &:hover {
+            background-color: $primary-clr;
+            color: $white;
+        }
+    }
+}
+
+
+/*****************
+    Modal
+******************/
+.modal {
+    display: none;
+    position: fixed;
+
+    &::before {
+        position: fixed;
+        content: "";
+        inset: 0;
+        background-color: $black;
+        opacity: 0.7;
+    }
+
+    &.show {
+        display: block;
+    }
+
+    &__container {
+        background-color: $white;
+        border-radius: $border-radius--medium;
+        border: 2px solid $grey-400;
+        min-width: 300px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 1.5em;
+    }
+
+    h3 {
+        margin-bottom: 1em;
+    }
+
+    button {
+        display: block;
+        margin-left: auto;
+    }
+}

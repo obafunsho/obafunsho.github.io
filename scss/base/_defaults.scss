@@ -1,0 +1,171 @@
+@use 'variables' as *;
+
+/*****************
+    Reset
+******************/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*****************
+    Element Defaults Styles
+******************/
+a {
+    text-decoration: none;
+    color: $link-blue;
+
+    &:hover {
+        text-decoration: underline solid 2px $primary-clr;
+    }
+}
+
+a,
+button {
+
+    &:focus,
+    &:focus-visible {
+        border-color: $primary-clr;
+        outline-color: $primary-clr;
+    }
+}
+
+body {
+    font-family: $font-sans;
+    background-color: #fff;
+}
+
+button {
+    appearance: none;
+    border: 2px solid transparent;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    font: inherit;
+    font-size: $font-medium;
+}
+
+figure {
+    margin: 2em 0;
+
+    img {
+        border-radius: $border-radius--small;
+        margin-bottom: 0.5em;
+    }
+}
+
+figcaption {
+    color: $grey-400;
+    font-size: $font-small;
+    font-weight: 500;
+    text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 500;
+    margin-bottom: 0.3em;
+    line-height: 1;
+}
+
+h1,
+h2 {
+    font-family: $font-display;
+}
+
+h1 {
+    font-size: $h1;
+}
+
+h2 {
+    font-size: $h2;
+}
+
+h3 {
+    font-size: $h3;
+}
+
+img,
+picture {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+textarea {
+    appearance: none;
+    background-color: $white;
+    border: 2px solid $grey-200;
+    font: inherit;
+    outline: none;
+    padding: .625em 1em;
+    transition: border-color 200ms ease;
+
+    &:hover {
+        border-color: $primary-clr;
+    }
+
+    &:focus {
+        border-color: $primary-clr;
+    }
+}
+
+p {
+    color: $text-clr;
+    font-size: $font-regular;
+    line-height: 1.4;
+    margin-bottom: 1em;
+}
+
+
+/*****************
+    Default Classes
+******************/
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 2em;
+
+    h2 {
+        font-size: $h2;
+    }
+
+    p {
+        color: $grey-500;
+    }
+}
+
+.page-heading {
+    background-color: $grey-bg;
+    border-radius: $border-radius--medium;
+    margin-top: 1em;
+    padding: 3em;
+
+    span {
+        color: $primary-clr;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
+[hidden] {
+    display: none !important;
+}

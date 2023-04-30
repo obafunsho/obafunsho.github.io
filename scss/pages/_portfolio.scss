@@ -1,0 +1,269 @@
+@use '../base/variables' as *;
+
+/* Portfolio Page Styles */
+
+/*****************
+    Projects Section
+******************/
+.projects {
+    margin-top: 4em;
+
+    &__allcards {
+        display: flex;
+        justify-content: space-between;
+        gap: 2em;
+        flex-wrap: wrap;
+    }
+
+    &__card {
+        flex: 1 1 320px;
+        padding: 3em 2em;
+        border-radius: 10px;
+        position: relative;
+        box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.05);
+        background-color: hsl($primary-hue, 12%, 12%);
+        border: 2px solid transparent;
+        transition: border-color 200ms ease-in-out;
+
+        &__heading {
+            color: $white;
+            margin-bottom: 0.5em;
+        }
+
+        &__badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5em;
+            margin-bottom: 0.75em;
+
+            span {
+                background-color: hsl($primary-hue, 12%, 20%);
+                border-radius: $border-radius--small;
+                color: $grey-300;
+                font-size: 0.75rem;
+                padding: 6px 10px;
+
+
+                &:first-of-type {
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+
+                    &::before {
+                        content: "";
+                        display: block;
+                        width: 7px;
+                        height: 7px;
+                        border-radius: 50%;
+                        background-color: green;
+                    }
+                }
+            }
+        }
+
+        &__desc {
+            margin-bottom: 1em;
+            color: $grey-200;
+        }
+
+        &:first-child:after {
+            background: linear-gradient(darkred, $sec-clr);
+            content: '';
+            clip-path: polygon(0% 0%, 100% 0, 100% 100%, 50% 75%, 0% 100%);
+            color: $sec-clr;
+            position: absolute;
+            top: -2px;
+            right: 2em;
+            width: 32px;
+            height: 40px;
+        }
+
+        &:nth-child(2) {
+            border: none;
+            background-color: transparent;
+        }
+    }
+
+
+    .all_skills {
+        >h3 {
+            margin-bottom: .5em;
+        }
+
+        div+h3 {
+            margin-top: 1.5em;
+        }
+    }
+
+    &__skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: .5em;
+
+        span {
+            cursor: default;
+            background-color: $grey-bg;
+            border: 2px dashed transparent;
+            border-radius: $border-radius--large;
+            color: $text-clr;
+            font-size: .875rem;
+            padding: .25em .75em;
+
+            &:hover {
+                border-color: $primary-clr;
+            }
+        }
+    }
+}
+
+
+/*****************
+    Blog Section
+******************/
+.blog {
+    margin: 2em 0 0;
+    padding: 3em 0;
+
+    &__post-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    &__post-item {
+        display: flex;
+        border-bottom: 2px solid $grey-200;
+        gap: .5em;
+        padding: 1.5em 0;
+
+        @media (min-width: 600px) {
+            padding-left: 2em;
+            padding-right: 2em;
+        }
+
+        &__content {
+            display: grid;
+            flex: 1 1 70%;
+
+            h3 {
+                font-size: $h3;
+                margin-bottom: 0;
+                letter-spacing: 0;
+                line-height: 1.2;
+
+                a {
+                    color: $black;
+
+                    &:hover {
+                        text-decoration: none;
+                        color: $primary-clr;
+                    }
+                }
+            }
+
+            p {
+                display: none;
+
+                @media (min-width: 600px) {
+                    display: block;
+                }
+            }
+        }
+
+        &__date {
+            color: $grey-400;
+        }
+
+        &__meta {
+            align-self: baseline;
+            margin-top: .5em;
+
+            span {
+                color: $text-clr;
+                font-size: $font-small;
+            }
+
+            span:first-of-type {
+                background-color: $grey-bg;
+                border-radius: $border-radius--large;
+                font-weight: 500;
+                letter-spacing: -0.25px;
+                margin-right: .5em;
+                padding: 0.5em 1em;
+            }
+        }
+
+        &__image {
+            border-radius: $border-radius--small;
+            overflow: hidden;
+            width: 120px;
+            height: 120px;
+
+            img {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+            }
+
+            @media (min-width: 600px) {
+                width: 180px;
+                height: 180px;
+            }
+        }
+    }
+
+    &__tags {
+        border-bottom: 1px solid $grey-100;
+        border-radius: $border-radius--small;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: .125em;
+        background-color: $grey-bg;
+        padding: 1.25em 1.5em 0.875em;
+
+        span {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        &-list {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            column-gap: 0.5em;
+            padding: 0;
+            min-height: 54px;
+            overflow-x: auto;
+            overflow-y: hidden;
+
+            li:first-of-type a {
+                display: flex;
+                align-items: center;
+                gap: .125em;
+
+                span {
+                    color: $primary-clr;
+                    font-size: $font-medium;
+                }
+            }
+
+            a {
+                background-color: $white;
+                border: 2px solid $grey-200;
+                border-radius: $border-radius--small;
+                color: $text-clr;
+                font-size: $font-medium;
+                font-weight: 500;
+                padding: .5em .75em;
+                overflow: hidden;
+                white-space: nowrap;
+
+                &:hover {
+                    // background-color: $primary-100;
+                    border-color: $primary-clr;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

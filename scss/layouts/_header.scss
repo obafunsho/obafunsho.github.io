@@ -1,0 +1,51 @@
+// Add layout styling for your header
+@use '../base/variables' as *;
+
+/*****************
+    Header Section
+******************/
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2em;
+    padding: 0.5em 0;
+
+    &__logo {
+        max-width: 160px;
+    }
+
+    &__nav_list {
+        background-color: $grey-bg;
+        border-radius: $border-radius--small;
+        display: flex;
+        align-items: center;
+        gap: 1.25em;
+        list-style: none;
+        padding: 0.625em 1.75em;
+
+        li:not(:last-of-type) {
+            border-right: 2px solid $grey-400;
+            padding-right: 1.25em;
+        }
+
+        li a {
+            color: $black;
+            font-family: $font-display;
+            font-size: 1.125rem;
+        }
+    }
+
+    &__menu-icon {
+        background-color: $grey-bg;
+        border-radius: .25em;
+        color: $black;
+        position: absolute;
+        top: 0.625em;
+        right: 2em;
+        padding: 0.4em 0.5em;
+
+        &:hover {
+            background-color: $grey-200;
+        }
+    }
+}

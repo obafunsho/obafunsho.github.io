@@ -1,0 +1,159 @@
+@use '../base/variables' as *;
+
+/* Home Page Styles */
+
+/*****************
+    Main Container
+******************/
+.main {
+    margin: 0 auto;
+    padding: 0.25em 1em;
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+}
+
+/*****************
+    Hero Section
+******************/
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin: 2em 0;
+
+    &__profile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1 1 480px;
+        gap: 1em;
+        background-color: $grey-bg;
+        border-radius: $border-radius--medium;
+        padding: 2em 1em;
+
+        &_image {
+            width: 110px;
+            height: 110px;
+            background-color: $white;
+            border-radius: 50%;
+            pointer-events: none;
+            user-select: none;
+
+            @media (min-width: 500px) {
+                width: 180px;
+                height: 180px;
+            }
+        }
+
+        &_name {
+            font-size: $h1;
+        }
+
+        &_title {
+            font-size: $h3;
+            font-family: $font-sans;
+            font-weight: 500;
+            -webkit-text-fill-color: transparent;
+            background: linear-gradient(to right, #1a2a6c, #b21f1f, #fda312);
+            -webkit-background-clip: text;
+            background-clip: text;
+            letter-spacing: -1px;
+            margin-bottom: .5em;
+        }
+
+        &_summary {
+            margin-bottom: 0;
+        }
+    }
+
+    &__description {
+        background-color: $grey-bg;
+        border-radius: $border-radius--medium;
+        padding: 2.5em 2em;
+        flex: 1 1 300px;
+
+        p:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+
+/*****************
+    About Section
+******************/
+.about {
+    padding: 70px 0 80px;
+
+    &__allcards {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+
+    &__card {
+        background-color: $grey-bg;
+        border-radius: 10px;
+        padding: 3em 2.25em;
+        flex: 1 1 300px;
+
+        &_icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            height: 40px;
+            width: 40px;
+        }
+
+        &__heading {
+            margin-top: 2em;
+        }
+    }
+}
+
+/*****************
+    Newsletter Card
+******************/
+.newsletter {
+    background-color: $black;
+    border-radius: $border-radius--medium;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin-bottom: 3em;
+
+    &__image {
+        flex: 1 0 180px;
+        height: 180px;
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        @media (min-width: 600px) {
+            height: 240px;
+        }
+    }
+
+    &__body {
+        display: grid;
+        flex: 1 1 480px;
+        padding: 2em 2em;
+
+        h2 {
+            color: $white;
+        }
+
+        p {
+            color: $grey-200;
+        }
+    }
+
+    &__cta {
+        align-self: end;
+    }
+}
